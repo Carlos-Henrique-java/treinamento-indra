@@ -52,6 +52,8 @@ public class ContaBancariaService extends GenericCrudService<ContaBancaria, Long
 		this.depositar(dto.getAgenciaDestino(), dto.getNumeroContaDestino(), dto.getValor());
 	}
 	
+	
+	
 	public ContaBancaria consultarConta (String agencia, String numeroConta) {
 		ContaBancaria c = repository.findByAgenciaAndNumero(agencia, numeroConta);
 		

@@ -60,4 +60,6 @@ public class ContaBancariaRest extends GenericCrudRest<ContaBancaria, Long, Cont
 		contaBancariaService.transferir(dto);
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
+	
+
 }
