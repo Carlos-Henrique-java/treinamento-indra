@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ClientesComponent } from './pages/clientes/clientes.component';
 import { ContasComponent } from './pages/contas/contas.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ClientesCadastrarEditarComponent } from './pages/clientes/clientes-cadastrar-editar/clientes-cadastrar-editar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +16,15 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     ClientesComponent,
-    ContasComponent
+    ContasComponent,
+    ClientesCadastrarEditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

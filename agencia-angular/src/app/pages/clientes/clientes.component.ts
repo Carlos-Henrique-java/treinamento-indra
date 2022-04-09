@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICliente } from 'src/app/interfaces/cliente1';
 import { ClientesService } from 'src/app/services/clientes.service';
 
 @Component({
@@ -9,14 +10,14 @@ import { ClientesService } from 'src/app/services/clientes.service';
 export class ClientesComponent implements OnInit {
 
   constructor(private clienteService: ClientesService) { }
-  clientes: any[] = [];
+  clientes: ICliente[] = [];
 
   ngOnInit(): void {
     this.listarTodos();  
   }
 
   listarTodos(){
-    this.clienteService.ListarTodosClientes().subscribe((result: any) =>{
+    this.clienteService.ListarTodosClientes().subscribe((result: ICliente[]) => {
       this.clientes = result;
       console.log(this.clientes);
     });
